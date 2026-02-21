@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "slug": "title-test",
+    "title": "Title Test",
+    "speaker": "Reji Thomas",
+    "event_start": "2026-01-25T17:20:00",
+    "event_end": "2026-01-27T19:30:00",
+    "location": "Mallappally",
+    "description_html": "Convention",
+    "is_published": true
+  },
+  {
+    "id": 2,
+    "slug": "sunday-worship-service",
+    "title": "Sunday Worship Service",
+    "speaker": "CFC Worship Team",
+    "event_start": "2026-02-02T10:30:00",
+    "event_end": "2026-02-02T12:00:00",
+    "location": "Dubai",
+    "description_html": "Join us for worship, prayer, and fellowship.",
+    "is_published": true
+  },
+  {
+    "id": 3,
+    "slug": "youth-fellowship",
+    "title": "Youth Fellowship",
+    "speaker": "",
+    "event_start": "2026-02-07T19:30:00",
+    "event_end": "2026-02-07T21:00:00",
+    "location": "Dubai",
+    "description_html": "Weekly fellowship meeting for youth. Details will be shared in the group.",
+    "is_published": true
+  },
+  {
+    "id": 4,
+    "slug": "bible-study-online",
+    "title": "Bible Study (Online)",
+    "speaker": "Bible Study Team",
+    "event_start": "2026-02-10T20:00:00",
+    "event_end": "2026-02-10T21:00:00",
+    "location": "Online",
+    "description_html": "Zoom link will be shared before the session.",
+    "is_published": true
+  },
+  {
+    "id": 5,
+    "slug": "womens-prayer-meet",
+    "title": "Women’s Prayer Meeting",
+    "speaker": "",
+    "event_start": "2026-02-14T18:30:00",
+    "event_end": "2026-02-14T19:30:00",
+    "location": "Dubai",
+    "description_html": "A time of prayer and encouragement. All sisters are welcome.",
+    "is_published": true
+  }
+]
