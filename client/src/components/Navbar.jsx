@@ -12,7 +12,7 @@ const navItems = [
   { to: "/about", label: "About Us" },
   { to: "/sermons", label: "Sermons" },
   { to: "/events", label: "Events" },
-  { to: "/qa", label: "Q&A" },
+ // { to: "/qa", label: "Q&A" },
   { to: "/resources", label: "Resources" },
   { to: "/youth", label: "Scripture Class" },
   { to: "/contact", label: "Contact Us" },

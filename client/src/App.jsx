@@ -15,19 +15,21 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        {/* Public pages */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/about/:slug" element={<StaticPage />} />
-        <Route path="/sermons" element={<Sermons />} />
-        <Route path="/sermons/:slug" element={<SermonDetail />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/events/:slug" element={<EventDetail />} />
-        <Route path="/youth" element={<Youth />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resources" element={<Resources />} />
+        {/* Home */}
+        <Route index element={<Home />} />
 
-        {/* Simple 404 */}
+        {/* Public pages */}
+        <Route path="about" element={<About />} />
+        <Route path="about/:slug" element={<StaticPage />} />
+        <Route path="sermons" element={<Sermons />} />
+        <Route path="sermons/:slug" element={<SermonDetail />} />
+        <Route path="events" element={<Events />} />
+        <Route path="events/:slug" element={<EventDetail />} />
+        <Route path="youth" element={<Youth />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="resources" element={<Resources />} />
+
+        {/* 404 */}
         <Route
           path="*"
           element={
