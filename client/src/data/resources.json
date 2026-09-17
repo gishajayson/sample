@@ -1,23 +1,83 @@
-[
-  {
-    "id": 1,
-    "title": "Newsletter - January 2026",
-    "category": "Newsletter",
-    "file": "/resources/test 1.pdf.pdf",
-    "date": "2026-01-20"
-  },
-  {
-    "id": 2,
-    "title": "Song Links (PDF)",
-    "category": "Songs",
-    "file": "/resources/test 1.pdf",
-    "date": "2026-02-01"
-  },
-  {
-    "id": 3,
-    "title": "Meeting Notes",
-    "category": "Documents",
-    "file": "/resources/test 1.pdf",
-    "date": "2026-02-10"
-  }
-]
+{
+  "categories": [
+    {
+      "slug": "newsletters",
+      "title": "Newsletters",
+      "description": "Church newsletters and monthly updates"
+    },
+    {
+      "slug": "songs",
+      "title": "Songs",
+      "description": "Song sheets and lyrics"
+    },
+    {
+      "slug": "albums",
+      "title": "Albums",
+      "description": "Song albums and collections"
+    },
+    {
+      "slug": "documents",
+      "title": "Documents",
+      "description": "Forms, guides, and other documents"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Newsletter - January 2026",
+      "category": "Newsletters",
+      "file": "/resources/test1.pdf",
+      "date": "2026-01-20"
+    },
+    {
+      "id": 2,
+      "title": "Song (PDF)",
+      "category": "Songs",
+      "file": "/resources/Songs.pptx",
+      "date": "2026-02-01"
+    },
+    
+    {
+      "id": 4,
+      "title": "Araadhyan | ആരാധ്യൻ by Late Pr. Babu Kurunthottikka",
+      "category": "Albums",
+      "file": "https://youtu.be/W_QBHNH7Rag",
+      "type": "link"
+    },
+    {
+      "id": 5,
+      "title": "Asrayam | ആശ്രയം by Late Pr. Babu Kurunthottikkal",
+      "category": "Albums",
+      "file": "https://youtu.be/ASMspTer-fo",
+      "type": "link"
+    },
+    {
+      "id": 6,
+      "title": "Kripayude Vaathil | കൃപയുടെ വാതിൽ by Late Pr. Babu Kurunthottikkal (Full Album)",
+      "category": "Albums",
+      "file": "https://youtu.be/Ddh0Hc_uoAY",
+      "type": "link"
+    },
+    {
+      "id": 7,
+      "title": "Parbhatham | പ്രഭാതം by Late Pr. Babu Kurunthottikkal ",
+      "category": "Albums",
+      "file": "https://youtu.be/w4FMe_x0PsY",
+      "type": "link"
+    },
+    {
+      "id": 8,
+      "title": "Theeram | തീരം by Late Pr. Babu Kurunthottikkal",
+      "category": "Albums",
+      "file": "https://youtu.be/I7wECwgDu1E",
+      "type": "link"
+    },
+    {
+      "id": 9,
+      "title": "Arppanam | അർപ്പണം by Late Pr. Babu Kurunthottikka",
+      "category": "Albums",
+      "file": "https://youtu.be/5Mr6UPwvLSY",
+      "type": "link"
+    }
+  ]
+}

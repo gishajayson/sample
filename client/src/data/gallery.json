@@ -1,0 +1,47 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "slug": "scriptureclass-activities",
+      "title": "Scripture class - Activities",
+      "description": "Photos of our Scripture class Activities",
+      "date": "2026-01-15",
+      "coverImage": "/gallery/sc_4.jpeg",
+      "pictures": [
+        { "id": 1, "src": "/gallery/sc_1.jpeg", "alt": "Worship" },
+        { "id": 2, "src": "/gallery/sc_2.jpeg", "alt": "Worship" },
+        { "id": 3, "src": "/gallery/sc_3.jpeg", "alt": "Worship" },
+         { "id": 3, "src": "/gallery/sc_4.jpeg", "alt": "Worship" }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "CFC India Pics",
+      "title": "CFC India",
+      "description": "CFC India Pics",
+      "date": "2026-02-07",
+      "coverImage": "/gallery/india_1.jpeg",
+      "pictures": [
+        { "id": 1, "src": "/gallery/india_1.jpeg", "alt": "Youth Fellowship" },
+        { "id": 2, "src": "/gallery/india_2.jpeg", "alt": "Youth Fellowship" },
+        { "id": 3, "src": "/gallery/india_3.jpeg", "alt": "Youth Fellowship" },
+        { "id": 4, "src": "/gallery/india_4.jpeg", "alt": "Youth Fellowship" },
+        { "id": 5, "src": "/gallery/india_5.jpeg", "alt": "Youth Fellowship" }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "church-gathering",
+      "title": "Church Gathering",
+      "description": "Moments from our church gatherings",
+      "date": "2026-01-20",
+      "coverImage": "/gallery/gathering-cover.jpg",
+      "pictures": [
+        { "id": 1, "src": "/gallery/gathering-1.jpg", "alt": "Church Gathering" },
+        { "id": 2, "src": "/gallery/gathering-2.jpg", "alt": "Church Gathering" },
+        { "id": 3, "src": "/gallery/gathering-3.jpg", "alt": "Church Gathering" },
+        { "id": 4, "src": "/gallery/gathering-4.jpg", "alt": "Church Gathering" }
+      ]
+    }
+  ]
+}

@@ -43,10 +43,10 @@ export default function Contact() {
   return (
     <Container>
       <h1 className="text-3xl font-bold">Contact Us</h1>
-      <p className="mt-3 text-slate-700">Use this form or add phone/WhatsApp details below.</p>
+      <p className="mt-3 text-cfc-dark/80">Use this form or add phone/WhatsApp details below.</p>
 
       <div className="mt-6 grid md:grid-cols-2 gap-6">
-        <form onSubmit={submit} className="rounded-xl border bg-white p-6 flex flex-col gap-3">
+        <form onSubmit={submit} className="rounded-xl border border-cfc-callout bg-cfc-card p-6 flex flex-col gap-3">
           <input className="border rounded px-3 py-2" placeholder="Name" value={form.name}
                  onChange={(e) => setForm({ ...form, name: e.target.value })} required />
           <input className="border rounded px-3 py-2" placeholder="Email" type="email" value={form.email}
@@ -55,17 +55,27 @@ export default function Contact() {
                  onChange={(e) => setForm({ ...form, phone: e.target.value })} />
           <textarea className="border rounded px-3 py-2 min-h-32" placeholder="Message" value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })} required />
-          <button className="px-4 py-2 rounded bg-slate-900 text-white hover:opacity-90">Send</button>
-          {status && <div className="text-sm text-slate-600">{status}</div>}
+          <button className="px-4 py-2 rounded bg-cfc-cta text-white hover:opacity-90">Send</button>
+          {status && <div className="text-sm text-cfc-dark/70">{status}</div>}
         </form>
 
-        <div className="rounded-xl border bg-white p-6">
+        <div className="rounded-xl border border-cfc-callout bg-cfc-card p-6">
           <div className="font-semibold">Meeting Location</div>
-          <div className="mt-2 text-slate-700">
-            Add the full address and a Google Maps embed.
-          </div>
-          <div className="mt-4 aspect-video bg-slate-100 border rounded flex items-center justify-center text-slate-500">
-            Maps embed placeholder
+          <p className="mt-2 text-cfc-dark/80">
+            Union Church, Al Yarmook, Sharjah, UAE
+          </p>
+          <div className="mt-4 aspect-video rounded-lg overflow-hidden border border-cfc-callout/60">
+            <iframe
+              src="https://www.google.com/maps?q=Union+Church+AL+Yarmook+Sharjah+UAE&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Union Church, Al Yarmook, Sharjah"
+              className="w-full h-full min-h-[240px]"
+            />
           </div>
         </div>
       </div>

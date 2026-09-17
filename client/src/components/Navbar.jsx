@@ -1,33 +1,27 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Container from "./Container.jsx";
-
+import { ArrowRight } from "lucide-react";
 // Put these files here:
 // client/src/assets/logo.png
-// client/src/assets/header-bg.jpg
+// client/src/assets/header-bg.jpeg
 import logo from "../assets/logo.png";
-import headerBg from "../assets/header-bg.jpg";
+import headerBg from "../assets/header-bg.jpeg";
 
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/sermons", label: "Sermons" },
-  { to: "/events", label: "Events" },
- // { to: "/qa", label: "Q&A" },
+  { to: "/gallery", label: "Gallery" },
+  // { to: "/qa", label: "Q&A" },
   { to: "/resources", label: "Resources" },
   { to: "/youth", label: "Scripture Class" },
   { to: "/contact", label: "Contact Us" },
 ];
 
 export default function Navbar() {
-  const navigate = useNavigate();
-
-  // Colors close to your screenshot
-  const NAV_BLUE = "#0A6EA8";
-  const NAV_BLUE_HOVER = "#095F90";
-
   return (
-    <header className="bg-white">
-      {/* ===== Top Banner (cloud background + darker overlay) ===== */}
+    <header className="bg-cfc-bg">
+      {/* ===== Top Banner ===== */}
       <div
         className="border-b"
         style={{
@@ -36,10 +30,10 @@ export default function Navbar() {
           backgroundPosition: "center",
         }}
       >
-        {/* Overlay (increase / decrease opacity to match darkness) */}
-        <div className="bg-sky-900/35">
+        {/* Overlay */}
+        <div className="bg-cfc-dark/40">
           <Container>
-            <div className="py-4 flex items-center gap-4">
+            <div className="py-8 md:py-10 flex items-center gap-4">
               {/* Logo */}
               <img
                 src={logo}
@@ -54,73 +48,79 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Verse badge */}
-              <div className="hidden md:block">
-                <div className="max-w-[420px] rounded-lg border-2 border-sky-600 bg-white/85 px-4 py-2 text-sky-800 italic text-sm leading-snug shadow-sm">
-                  “And you shall call His name <b>Jesus</b> for He will save His
-                  people from their sins”
-                  <div className="not-italic text-right font-semibold mt-1">
-                    – Matthew 1:21
-                  </div>
-                </div>
-              </div>
+              {/* Verse moved to Home hero */}
             </div>
           </Container>
         </div>
       </div>
 
-      {/* ===== Blue Navigation Bar ===== */}
-      <div style={{ backgroundColor: NAV_BLUE }}>
+      {/* ===== Navigation Bar ===== */}
+      <div className="bg-cfc-dark">
         <Container>
-          <div className="flex items-center justify-between">
-            <nav className="flex flex-wrap items-center gap-2 py-2">
+          <div className="flex items-center justify-between py-2">
+            {/* LEFT: normal tabs */}
+            <nav className="flex flex-wrap items-center gap-2">
               {navItems.map((x) => (
                 <NavLink
                   key={x.to}
                   to={x.to}
                   className={({ isActive }) =>
                     [
-                      "px-4 py-2 rounded text-white text-sm font-semibold",
-                      "transition",
-                      // ✅ Active tab: dark background, readable text
-                      isActive
-                        ? "bg-sky-900 text-white ring-2 ring-white/40"
-                        : "",
+                      "px-4 py-2 rounded text-white text-sm font-semibold transition",
+                      "hover:bg-cfc-callout/40",
+                      isActive ? "bg-cfc-callout/60 ring-2 ring-white/30" : "",
                     ].join(" ")
                   }
-                  onMouseEnter={(e) => {
-                    // hover only if NOT active
-                    if (!e.currentTarget.className.includes("bg-sky-900")) {
-                      e.currentTarget.style.backgroundColor = NAV_BLUE_HOVER;
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!e.currentTarget.className.includes("bg-sky-900")) {
-                      e.currentTarget.style.backgroundColor = "transparent";
-                    }
-                  }}
                 >
                   {x.label}
                 </NavLink>
               ))}
             </nav>
 
-            {/* Search icon */}
-            <button
-              onClick={() => navigate("/search")}
-              className="ml-3 h-10 w-10 flex items-center justify-center rounded text-white transition"
-              style={{ backgroundColor: "transparent" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = NAV_BLUE_HOVER)
+            {/* RIGHT: distinct CTA 
+            <NavLink
+              to="/next-steps"
+              className={({ isActive }) =>
+                [
+                  "px-5 py-2 rounded-full font-extrabold text-sm transition",
+                  "bg-cfc-cta text-white shadow",
+                  "hover:opacity-90",
+                  "border border-white/30",
+                  isActive ? "ring-2 ring-white/40" : "",
+                ].join(" ")
               }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "transparent")
-              }
-              title="Search"
-              aria-label="Search"
             >
-              🔍
-            </button>
+              Next Step
+            </NavLink>*/}
+
+      <NavLink
+        to="/next-steps"
+        className={({ isActive }) =>
+          [
+            "group ml-4 px-5 py-2 rounded-full transition",
+            "bg-cfc-cta text-white shadow",
+            "hover:opacity-95 hover:shadow-md",
+            "border border-white/30",
+            isActive ? "ring-2 ring-white/40" : "",
+            "flex items-center gap-3",
+            "cfc-cta-pulse",  
+          ].join(" ")
+        }
+      >
+        <div className="leading-tight">
+          <div className="font-extrabold text-sm">Next Steps</div>
+          <div className="text-[11px] text-white/85">New here?</div>
+        </div>
+
+        <ArrowRight
+          size={18}
+          className="transition-transform group-hover:translate-x-1"
+        />
+      </NavLink>
+
+
+
+            
           </div>
         </Container>
       </div>
